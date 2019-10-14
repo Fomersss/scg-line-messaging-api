@@ -1,0 +1,23 @@
+{
+  "name": "scg-line-messaging-api",
+  "version": "1.0.0",
+  "description": "for assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fomersss/scg-line-messaging-api.git"
+  },
+  "author": "ratchanon wadthaisong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fomersss/scg-line-messaging-api/issues"
+  },
+  "homepage": "https://github.com/Fomersss/scg-line-messaging-api#readme",
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.2",
+    "express": "^4.17.1"
+  }
+}
