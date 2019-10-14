@@ -2,10 +2,8 @@
 
 const line = require('@line/bot-sdk');
 const express = require('express');
-// const path = require('path');
 
-
-// create LINE SDK config from env variables
+// create LINE SDK config from my line bot config
 const config = {
   channelAccessToken: '41xVYHPUA4RAnSlm46Q1sXUCzL2h/laISBgNuL1cdY2fFhAYX0z3anpFYqSb1vzDilmANUbrSzge3q1Qt47Pck3sJVUJ9XQPixycEtWjZpcTDAigkuYeZTCaJA69Ru4yJsTUBOKUeXW0p/JKZou3PwdB04t89/1O/w1cDnyilFU=',
   channelSecret: '2c573d3d3f983c9261e5e1fcc9729b70',
@@ -15,15 +13,14 @@ const config = {
 const client = new line.Client(config);
 
 // create Express app
-// about Express itself: https://expressjs.com/
 const app = express();
 
 
 // register a webhook handler with middleware
-// about the middleware, please refer to doc
 app.post('/callback', line.middleware(config), (req, res) => {
   Promise
     .all(req.body.events.map((event) => {
+        // for verify line webhook
         if(event.source.userId === 'Udeadbeefdeadbeefdeadbeefdeadbeef'){
             return;
         }
