@@ -1,2 +1,2 @@
-# scg-line-messing-api
+# scg-line-messaging-api
 for assignment
