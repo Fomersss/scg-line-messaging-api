@@ -1,0 +1,12 @@
+{
+  "channelAccessToken": "41xVYHPUA4RAnSlm46Q1sXUCzL2h/laISBgNuL1cdY2fFhAYX0z3anpFYqSb1vzDilmANUbrSzge3q1Qt47Pck3sJVUJ9XQPixycEtWjZpcTDAigkuYeZTCaJA69Ru4yJsTUBOKUeXW0p/JKZou3PwdB04t89/1O/w1cDnyilFU=",
+  "channelSecret": "2c573d3d3f983c9261e5e1fcc9729b70",
+  "userId": "Udeadbeefdeadbeefdeadbeefdeadbeef",
+  "dialogFlow": {
+    "uri": "https://bots.dialogflow.com/line/6331df18-de7d-416f-badf-7eb3fc287f92/webhook",
+    "host": "bots.dialogflow.com"
+  },
+  "firebase": {
+   "databaseURL" : "https://scg-assignment-30d98.firebaseio.com"
+  }
+}

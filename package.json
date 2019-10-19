@@ -4,7 +4,7 @@
   "description": "for assignment",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,18 @@
   },
   "homepage": "https://github.com/Fomersss/scg-line-messaging-api#readme",
   "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
     "@line/bot-sdk": "^6.8.2",
     "express": "^4.17.1",
-    "path": "^0.12.7"
+    "firebase-admin": "^8.6.1",
+    "nodemon": "^1.19.4",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
