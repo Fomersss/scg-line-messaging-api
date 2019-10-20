@@ -28,7 +28,7 @@ app.post('/callback', line.middleware(config), (req, res) => {
   Promise
     .all(req.body.events.map((event) => {
       // for verify line webhook
-      if (event.source.userId === config.userId) {
+      if (event.source.userId === 'Udeadbeefdeadbeefdeadbeefdeadbeef') {
         return;
       }
       return handleEvent(event,req)
