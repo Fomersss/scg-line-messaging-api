@@ -35,7 +35,7 @@ app.post('/callback', line.middleware(configLine), (req, res) => {
       if (event.source.userId === 'Udeadbeefdeadbeefdeadbeefdeadbeef') {
         return;
       }
-      // return handleEvent(event,req)
+      return handleEvent(event,req)
     }))
     .then((result) => res.json(result))
     .catch((err) => {
