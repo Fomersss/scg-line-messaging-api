@@ -2,18 +2,22 @@
 
 const line = require('@line/bot-sdk');
 const express = require('express');
-const config = require('./config.json')
-const dialogflowService = require('./services/dialogflow')
-const admin = require("firebase-admin");
-const serviceAccount = require("./firebase.json");
+// const config = require('./config.json')
+// const dialogflowService = require('./services/dialogflow')
+// const admin = require("firebase-admin");
+// const serviceAccount = require("./firebase.json");
 
 // initial firebase
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: config.firebase.databaseURL
-});
+// admin.initializeApp({
+//     credential: admin.credential.cert(serviceAccount),
+//     databaseURL: config.firebase.databaseURL
+// });
 
 
+const config = {
+  channelAccessToken: '41xVYHPUA4RAnSlm46Q1sXUCzL2h/laISBgNuL1cdY2fFhAYX0z3anpFYqSb1vzDilmANUbrSzge3q1Qt47Pck3sJVUJ9XQPixycEtWjZpcTDAigkuYeZTCaJA69Ru4yJsTUBOKUeXW0p/JKZou3PwdB04t89/1O/w1cDnyilFU=',
+  channelSecret: '2c573d3d3f983c9261e5e1fcc9729b70',
+};
 
 
 // create LINE SDK client
@@ -31,7 +35,7 @@ app.post('/callback', line.middleware(config), (req, res) => {
       if (event.source.userId === 'Udeadbeefdeadbeefdeadbeefdeadbeef') {
         return;
       }
-      return handleEvent(event,req)
+      // return handleEvent(event,req)
     }))
     .then((result) => res.json(result))
     .catch((err) => {
